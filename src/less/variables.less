@@ -1,0 +1,23 @@
+// breakpoints
+@screen-s: 36rem; //576px;
+@screen-m: 48rem; //768px;
+@screen-l: 62rem; //992px;
+@screen-xl: 75rem; //1200px;
+
+@grid-gutter-width: 0.8rem; //32px;
+@grid-gutter-width-s: 1.1rem; //32px;
+@grid-gutter-width-m: 1.4rem; //32px;
+@grid-gutter-width-l: 1.7rem; //32px;
+@grid-gutter-width-xl: 2rem; //32px;
+
+// gridconfiguration (key breakpoint)
+@gridconf: s @screen-s @grid-gutter-width-s, m @screen-m @grid-gutter-width-m, l @screen-l @grid-gutter-width-l, xl @screen-xl @grid-gutter-width-xl;
+
+// number of gridcols
+@grid-cols: 12;
+
+// define your classnames
+@prefixname: hl-;
+@classname-wrapper: ~"@{prefixname}wrapper"; // hl-wrapper
+@classname-grid: ~"@{prefixname}grid"; // hl-grid
+@classname-col: ~"@{prefixname}col"; // hl-col

@@ -1,0 +1,88 @@
+.@{classname-wrapper},
+.@{classname-wrapper}-fluid {
+    &:extend(.basewrapper);
+}
+
+.@{classname-grid} {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: @grid-gutter-width / -2;
+    margin-right: @grid-gutter-width / -2;
+}
+
+[class*="@{classname-col}"] {
+    min-height: 1px;
+    padding-left: @grid-gutter-width / 2;
+    padding-right: @grid-gutter-width / 2;
+    position: relative;
+    width: 100%;
+}
+
+.no-gutter {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    > [class*="@{classname-col}"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        > .@{classname-grid} {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+}
+
+/**
+ * Deprecated! Will be removed in v.1.8.0
+ **/
+.no-spacings {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.no-spacings > [class*="@{classname-col}"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    > .@{classname-grid} {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+.gridbuilder();
+
+#each-grid-breakpoint(@i: 1) when (@i =< length(@gridconf)) {
+    @item: extract(@gridconf, @i);
+    @key: extract(@item, 1);
+    @breakpoint: extract(@item, 2);
+    @gutter: extract(@item, 3);
+
+    @media (min-width: @breakpoint) {
+        .@{classname-wrapper} {
+            width: @breakpoint - (@gutter);
+        }
+
+        .@{classname-wrapper},
+        .@{classname-wrapper}-fluid {
+            padding-right: @gutter / 2;
+            padding-left: @gutter / 2;
+        }
+
+        .@{classname-grid} {
+            margin-left: @gutter / -2;
+            margin-right: @gutter / -2;
+        }
+
+        [class*="@{classname-col}"] {
+            padding-left: @gutter / 2;
+            padding-right: @gutter / 2;
+        }
+
+        .gridbuilder(~"-@{key}");
+    }
+
+    #each-grid-breakpoint((@i + 1));
+}
+
+#each-grid-breakpoint();

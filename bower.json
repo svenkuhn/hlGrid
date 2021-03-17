@@ -1,0 +1,10 @@
+{
+    "name": "hlgrid",
+    "description": "Responsive CSS-Grid for Website-Developers",
+    "main": "",
+    "authors": ["Sven Kuhn"],
+    "license": "MIT",
+    "keywords": ["grid", "CSS"],
+    "homepage": "https://github.com/svenkuhn/hlGrid",
+    "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"]
+}

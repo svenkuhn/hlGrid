@@ -1,0 +1,29 @@
+{
+    "name": "hlgrid",
+    "version": "1.7.3",
+    "description": "Responsive CSS-Grid for Website-Developers",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/svenkuhn/hlGrid.git"
+    },
+    "keywords": [
+        "grid",
+        "css",
+        "layout",
+        "flexbox",
+        "flexboxgrid",
+        "less"
+    ],
+    "author": "Sven Kuhn",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/svenkuhn/hlGrid/issues"
+    },
+    "homepage": "https://www.hlgrid.de",
+    "devDependencies": {
+        "grunt": "^1.2.1",
+        "grunt-contrib-clean": "^1.1.0",
+        "grunt-contrib-less": "^2.0.0",
+        "less-plugin-autoprefix": "^2.0.0"
+    }
+}
