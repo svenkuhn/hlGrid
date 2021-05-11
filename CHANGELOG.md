@@ -2,6 +2,13 @@
 
 ## [Unreleased](https://github.com/svenkuhn/hlGrid/tree/HEAD)
 
+## [1.7.5](https://github.com/svenkuhn/hlGrid/compare/1.7.4...1.7.5) - 2021-05-11
+
+### Security
+
+-   Bump grunt from 1.2.1 to 1.4.0
+-   Bump lodash from 4.17.19 to 4.17.21
+
 ## [1.7.4](https://github.com/svenkuhn/hlGrid/compare/1.7.3...1.7.4) - 2021-03-23
 
 ### Changed
