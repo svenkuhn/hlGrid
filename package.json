@@ -1,6 +1,6 @@
 {
     "name": "hlgrid",
-    "version": "1.7.4",
+    "version": "1.7.5",
     "description": "Responsive CSS-Grid for Website-Developers",
     "repository": {
         "type": "git",
@@ -21,7 +21,7 @@
     },
     "homepage": "https://www.hlgrid.de",
     "devDependencies": {
-        "grunt": "^1.2.1",
+        "grunt": "^1.4.0",
         "grunt-contrib-clean": "^1.1.0",
         "grunt-contrib-less": "^2.0.0",
         "less-plugin-autoprefix": "^2.0.0"
