@@ -13,12 +13,12 @@ html {
           box-sizing: inherit;
 }
 /*!
- * hlgrid v1.6.4
+ * hlgrid v1.7.5
  * @author:    Sven Kuhn
  * @www:       https://www.hlgrid.de
  * @license    MIT (https://www.hlgrid.de/license)
  *
- * Copyright (c) 2018-2019 Sven Kuhn
+ * Copyright (c) 2018-2021 Sven Kuhn
  */
 .hl-wrapper,
 .hl-wrapper-fluid {
@@ -41,23 +41,33 @@ html {
   padding-right: 0.4rem;
   position: relative;
   width: 100%;
-  /*> .@{classname-wrapper}-fluid,
-    > .@{classname-grid} {
-        margin-left: @grid-gutter-width / -2;
-        margin-right: @grid-gutter-width / -2;
-    }*/
 }
+.no-gutter {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.no-gutter > [class*="hl-col"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.no-gutter > [class*="hl-col"] > .hl-grid {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+/**
+ * Deprecated! Will be removed in v.1.8.0
+ **/
 .no-spacings {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 .no-spacings > [class*="hl-col"] {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .no-spacings > [class*="hl-col"] > .hl-grid {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 .direction-row {
   -webkit-box-orient: horizontal;
