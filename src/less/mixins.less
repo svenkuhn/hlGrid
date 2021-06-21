@@ -86,10 +86,10 @@
     }
 
     .@{classname-col}-order-last@{class} {
-        order: @grid-cols + 1;
+        order: @grid-order-options + 1;
     }
 
-    #each-grid-ordercol(@grid-cols, @class);
+    #each-grid-ordercol(@grid-order-options, @class);
 
     .@{prefixname}break@{class} {
         width: 100% !important;
