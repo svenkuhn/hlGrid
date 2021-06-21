@@ -13,7 +13,7 @@ html {
           box-sizing: inherit;
 }
 /*!
- * hlgrid v1.7.5
+ * hlgrid v1.8.0
  * @author:    Sven Kuhn
  * @www:       https://www.hlgrid.de
  * @license    MIT (https://www.hlgrid.de/license)
@@ -51,21 +51,6 @@ html {
   padding-right: 0 !important;
 }
 .no-gutter > [class*="hl-col"] > .hl-grid {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-/**
- * Deprecated! Will be removed in v.1.8.0
- **/
-.no-spacings {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-.no-spacings > [class*="hl-col"] {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-.no-spacings > [class*="hl-col"] > .hl-grid {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }

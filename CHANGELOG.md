@@ -2,6 +2,16 @@
 
 ## [Unreleased](https://github.com/svenkuhn/hlGrid/tree/HEAD)
 
+## [1.8.0](https://github.com/svenkuhn/hlGrid/compare/1.7.5...1.8.0) - 2021-06-21
+
+### Added
+
+-   Added Variable @grid-order-options for sorting multirow Grids
+
+### Removed
+
+-   Removed .no-spacings Class
+
 ## [1.7.5](https://github.com/svenkuhn/hlGrid/compare/1.7.4...1.7.5) - 2021-05-11
 
 ### Security
