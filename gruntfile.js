@@ -16,6 +16,7 @@ module.exports = function (grunt) {
                         browsers: ["last 2 versions"],
                     }),
                 ],
+                math: "always",
             },
             dist: {
                 options: {
@@ -37,7 +38,7 @@ module.exports = function (grunt) {
                     "<%= distPath %><%= pkg.name %>-standalone.css": "src/Less/standalone.less",
                 },
             },
-        }
+        },
     });
 
     grunt.loadNpmTasks("grunt-contrib-clean");
