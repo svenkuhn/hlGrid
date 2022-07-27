@@ -2,6 +2,12 @@
 
 ## [Unreleased](https://github.com/svenkuhn/hlGrid/tree/HEAD)
 
+## [1.8.1](https://github.com/svenkuhn/hlGrid/compare/1.8.0...1.8.1) - 2022-07-27
+
+### Changed
+
+-    Update grunt-contrib-less to ^3.0.0
+
 ## [1.8.0](https://github.com/svenkuhn/hlGrid/compare/1.7.5...1.8.0) - 2021-06-21
 
 ### Added
