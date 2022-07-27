@@ -96,10 +96,10 @@
     }
 }
 
-#each-grid-col(@i, @class) when (@i > = 0) {
+#each-grid-col(@i, @class) when (@i > 0) {
     @width: percentage(@i / @grid-cols);
 
-    .@{classname-col}-@{i}@{class} when (@i > 0) {
+    .@{classname-col}-@{i}@{class} {
         flex: 0 0 @width;
         max-width: @width;
     }
@@ -117,7 +117,7 @@
     #each-grid-offsetcol((@i - 1), @class);
 }
 
-#each-grid-ordercol(@i, @class) when (@i > = 0) {
+#each-grid-ordercol(@i, @class) when (@i > 0) {
     .@{classname-col}-order-@{i}@{class} {
         order: @i;
     }

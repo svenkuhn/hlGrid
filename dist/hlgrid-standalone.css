@@ -13,7 +13,7 @@ html {
           box-sizing: inherit;
 }
 /*!
- * hlgrid v1.8.0
+ * hlgrid v1.8.2
  * @author:    Sven Kuhn
  * @www:       https://www.hlgrid.de
  * @license    MIT (https://www.hlgrid.de/license)
@@ -319,11 +319,6 @@ html {
       -ms-flex-order: 1;
           order: 1;
 }
-.hl-col-order-0 {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
-}
 .hl-break {
   width: 100% !important;
 }
@@ -608,11 +603,6 @@ html {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-  .hl-col-order-0-s {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
   }
   .hl-break-s {
     width: 100% !important;
@@ -900,11 +890,6 @@ html {
         -ms-flex-order: 1;
             order: 1;
   }
-  .hl-col-order-0-m {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
   .hl-break-m {
     width: 100% !important;
   }
@@ -1191,11 +1176,6 @@ html {
         -ms-flex-order: 1;
             order: 1;
   }
-  .hl-col-order-0-l {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
   .hl-break-l {
     width: 100% !important;
   }
@@ -1481,11 +1461,6 @@ html {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-  .hl-col-order-0-xl {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
   }
   .hl-break-xl {
     width: 100% !important;
