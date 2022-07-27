@@ -305,11 +305,6 @@
       -ms-flex-order: 1;
           order: 1;
 }
-.hl-col-order-0 {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
-}
 .hl-break {
   width: 100% !important;
 }
@@ -594,11 +589,6 @@
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-  .hl-col-order-0-s {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
   }
   .hl-break-s {
     width: 100% !important;
@@ -886,11 +876,6 @@
         -ms-flex-order: 1;
             order: 1;
   }
-  .hl-col-order-0-m {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
   .hl-break-m {
     width: 100% !important;
   }
@@ -1177,11 +1162,6 @@
         -ms-flex-order: 1;
             order: 1;
   }
-  .hl-col-order-0-l {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
   .hl-break-l {
     width: 100% !important;
   }
@@ -1467,11 +1447,6 @@
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-  .hl-col-order-0-xl {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
   }
   .hl-break-xl {
     width: 100% !important;
