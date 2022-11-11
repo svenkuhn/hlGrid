@@ -2,6 +2,14 @@
 
 ## [Unreleased](https://github.com/svenkuhn/hlGrid/tree/HEAD)
 
+## [1.8.3](https://github.com/svenkuhn/hlGrid/compare/1.8.1...1.8.3) - 2022-11-11
+
+### Changed
+
+-    Bump grunt from 1.4.1 to 1.5.3
+-    Bump minimatch from 3.0.4 to 3.0.8
+-    Bump less-plugin-autoprefix from 2.0.0 to 1.4.1
+
 ## [1.8.1](https://github.com/svenkuhn/hlGrid/compare/1.8.0...1.8.1) - 2022-07-27
 
 ### Changed
