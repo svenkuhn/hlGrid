@@ -67,6 +67,12 @@
         align-self: flex-end !important;
     }
 
+    .@{prefixname}divider@{class} {
+        width: @grid-divider-width;
+        margin: 0 @grid-divider-width / -2;
+        flex-grow: unset;
+    }
+
     #each-grid-col(@grid-cols, @class);
 
     .@{classname-col}-auto@{class} {
@@ -107,10 +113,10 @@
     #each-grid-col((@i - 1), @class);
 }
 
-#each-grid-offsetcol(@i, @class) when (@i > = 0) {
+#each-grid-offsetcol(@i, @class) when (@i >=0) {
     @width: percentage(@i / @grid-cols);
 
-    .@{classname-col}-offset-@{i}@{class} when (@i > = 0) {
+    .@{classname-col}-offset-@{i}@{class} when (@i >=0) {
         margin-left: @width;
     }
 

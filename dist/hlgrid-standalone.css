@@ -11,7 +11,7 @@ html {
   box-sizing: inherit;
 }
 /*!
- * hlgrid v1.8.2
+ * hlgrid v1.8.3
  * @author:    Sven Kuhn
  * @www:       https://www.hlgrid.de
  * @license    MIT (https://www.hlgrid.de/license)
@@ -29,6 +29,13 @@ html {
       flex-flow: row wrap;
   margin-left: -0.4rem;
   margin-right: -0.4rem;
+}
+[class*="hl-divider"] {
+  min-height: 1px;
+  margin: 0.4rem;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  background-color: #ccc;
 }
 [class*="hl-col"] {
   min-height: 1px;
@@ -109,6 +116,12 @@ html {
 .align-self-bottom {
   -ms-flex-item-align: end !important;
       align-self: flex-end !important;
+}
+.hl-divider {
+  width: 1px;
+  margin: 0 -0.5px;
+  -ms-flex-positive: unset;
+      flex-grow: unset;
 }
 .hl-col-12 {
   -ms-flex: 0 0 100%;
@@ -352,6 +365,12 @@ html {
   .align-self-bottom-s {
     -ms-flex-item-align: end !important;
         align-self: flex-end !important;
+  }
+  .hl-divider-s {
+    width: 1px;
+    margin: 0 -0.5px;
+    -ms-flex-positive: unset;
+        flex-grow: unset;
   }
   .hl-col-12-s {
     -ms-flex: 0 0 100%;
@@ -597,6 +616,12 @@ html {
     -ms-flex-item-align: end !important;
         align-self: flex-end !important;
   }
+  .hl-divider-m {
+    width: 1px;
+    margin: 0 -0.5px;
+    -ms-flex-positive: unset;
+        flex-grow: unset;
+  }
   .hl-col-12-m {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -841,6 +866,12 @@ html {
     -ms-flex-item-align: end !important;
         align-self: flex-end !important;
   }
+  .hl-divider-l {
+    width: 1px;
+    margin: 0 -0.5px;
+    -ms-flex-positive: unset;
+        flex-grow: unset;
+  }
   .hl-col-12-l {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -1084,6 +1115,12 @@ html {
   .align-self-bottom-xl {
     -ms-flex-item-align: end !important;
         align-self: flex-end !important;
+  }
+  .hl-divider-xl {
+    width: 1px;
+    margin: 0 -0.5px;
+    -ms-flex-positive: unset;
+        flex-grow: unset;
   }
   .hl-col-12-xl {
     -ms-flex: 0 0 100%;

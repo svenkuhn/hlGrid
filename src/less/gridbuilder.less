@@ -10,6 +10,13 @@
     margin-right: @grid-gutter-width / -2;
 }
 
+[class*="@{prefixname}divider"] {
+    min-height: @grid-divider-width;
+    margin: @grid-gutter-width / 2;
+    flex-grow: 1;
+    background-color: @grid-divider-color;
+}
+
 [class*="@{classname-col}"] {
     min-height: 1px;
     padding-left: @grid-gutter-width / 2;
@@ -22,11 +29,11 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
 
-    > [class*="@{classname-col}"] {
+    >[class*="@{classname-col}"] {
         padding-left: 0 !important;
         padding-right: 0 !important;
 
-        > .@{classname-grid} {
+        >.@{classname-grid} {
             margin-left: 0 !important;
             margin-right: 0 !important;
         }
