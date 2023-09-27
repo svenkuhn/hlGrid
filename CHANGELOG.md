@@ -2,7 +2,7 @@
 
 ## [Unreleased](https://github.com/svenkuhn/hlGrid/tree/HEAD)
 
-## [1.8.4](https://github.com/svenkuhn/hlGrid/compare/1.8.1...1.8.3) - 2023-09-27
+## [1.8.4](https://github.com/svenkuhn/hlGrid/compare/1.8.3...1.8.4) - 2023-09-27
 
 ### Added
 
