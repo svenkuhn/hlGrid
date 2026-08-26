@@ -117,7 +117,7 @@
 }
 
 #each-grid-col(@i, @class) when (@i > 0) {
-    @width: percentage(@i / @grid-cols);
+    @width: percentage((@i / @grid-cols));
 
     .@{classname-col}-@{i}@{class} {
         flex: 0 0 @width;
@@ -128,7 +128,7 @@
 }
 
 #each-grid-offsetcol(@i, @class) when (@i >=0) {
-    @width: percentage(@i / @grid-cols);
+    @width: percentage((@i / @grid-cols));
 
     .@{classname-col}-offset-@{i}@{class} when (@i >=0) {
         margin-left: @width;
