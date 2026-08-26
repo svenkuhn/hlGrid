@@ -1,6 +1,20 @@
 module.exports = function (grunt) {
     "use strict";
 
+    const postcss = require("postcss");
+    const autoprefixer = require("autoprefixer");
+    const autoprefixPlugin = {
+        install: function (less, pluginManager) {
+            pluginManager.addPostProcessor({
+                process: function (css) {
+                    return postcss([
+                        autoprefixer({ overrideBrowserslist: ["last 2 versions"] }),
+                    ]).process(css, { from: undefined }).css;
+                },
+            });
+        },
+    };
+
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
         distPath: "dist/",
@@ -11,11 +25,7 @@ module.exports = function (grunt) {
 
         less: {
             options: {
-                plugins: [
-                    new (require("less-plugin-autoprefix"))({
-                        browsers: ["last 2 versions"],
-                    }),
-                ],
+                plugins: [autoprefixPlugin],
                 math: "always",
             },
             dist: {

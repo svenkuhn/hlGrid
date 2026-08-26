@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hlGrid – Feature-Test</title>
+    <link rel="stylesheet" href="dist/hlgrid-standalone.css">
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #172033;
+            background: #eef2f7;
+        }
+
+        body { margin: 0; }
+        header { padding: 2.5rem 1rem; color: white; background: #172033; }
+        header h1 { margin: 0 0 .4rem; }
+        header p { margin: 0; color: #cbd5e1; }
+        main { padding-block: 1.5rem 4rem; }
+        section { margin-bottom: 2rem; padding: 1rem; background: white; border-radius: .6rem; }
+        h2 { margin: 0 0 .25rem; font-size: 1.25rem; }
+        h3 { margin: 1rem 0 .5rem; font-size: .95rem; }
+        .hint { margin: 0 0 1rem; color: #64748b; font-size: .9rem; }
+        code { padding: .1rem .3rem; border-radius: .25rem; background: #e2e8f0; }
+
+        .demo-grid { margin-bottom: .8rem; padding-block: .35rem; background: #e8eef7; }
+        .cell {
+            min-height: 3rem;
+            padding: .7rem;
+            border: 1px solid #93b4dc;
+            border-radius: .35rem;
+            color: #12345b;
+            background: #d7e8fb;
+            font-size: .82rem;
+            overflow-wrap: anywhere;
+        }
+        .cell.alt { border-color: #b59add; color: #47296e; background: #eadffc; }
+        .cell.accent { border-color: #70b9a0; color: #125943; background: #d8f4ea; }
+        .cell.tall { min-height: 7rem; }
+        .cell.medium { min-height: 5rem; }
+        .nested { margin-top: .7rem; padding: .35rem 0; background: rgb(255 255 255 / 65%); }
+        .nested .cell { min-height: 2.5rem; background: #fff4cc; border-color: #d9b94d; color: #624f0a; }
+        .label { display: block; font-weight: 700; }
+        .axis-demo { min-height: 10rem; }
+        .divider-label { padding: .5rem; color: #64748b; font-size: .8rem; }
+
+        @media (max-width: 35.99rem) {
+            header { padding-block: 1.5rem; }
+            section { border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hl-wrapper">
+            <h1>hlGrid Feature-Test</h1>
+            <p>Resize the browser window and check the layout changes at 576, 768, 992 and 1200 px.</p>
+        </div>
+    </header>
+
+    <main class="hl-wrapper">
+        <section>
+            <h2>1. Column widths 1 to 12</h2>
+            <p class="hint">Each row should add up to twelve grid units.</p>
+            <div class="hl-grid demo-grid">
+                <div class="hl-col-1"><div class="cell">1</div></div>
+                <div class="hl-col-11"><div class="cell">11</div></div>
+                <div class="hl-col-2"><div class="cell">2</div></div>
+                <div class="hl-col-10"><div class="cell">10</div></div>
+                <div class="hl-col-3"><div class="cell">3</div></div>
+                <div class="hl-col-9"><div class="cell">9</div></div>
+                <div class="hl-col-4"><div class="cell">4</div></div>
+                <div class="hl-col-8"><div class="cell">8</div></div>
+                <div class="hl-col-5"><div class="cell">5</div></div>
+                <div class="hl-col-7"><div class="cell">7</div></div>
+                <div class="hl-col-6"><div class="cell">6</div></div>
+                <div class="hl-col-6"><div class="cell">6</div></div>
+                <div class="hl-col-12"><div class="cell">12</div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Responsive breakpoints</h2>
+            <p class="hint">12/12 on mobile, 6/6 from <code>s</code>, 4/8 from <code>m</code>, 3/9 from <code>l</code> and 2/10 from <code>xl</code>.</p>
+            <div class="hl-grid demo-grid">
+                <div class="hl-col-12 hl-col-6-s hl-col-4-m hl-col-3-l hl-col-2-xl">
+                    <div class="cell accent">12 → 6-s → 4-m → 3-l → 2-xl</div>
+                </div>
+                <div class="hl-col-12 hl-col-6-s hl-col-8-m hl-col-9-l hl-col-10-xl">
+                    <div class="cell accent">12 → 6-s → 8-m → 9-l → 10-xl</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Auto columns, content columns and line breaks</h2>
+            <p class="hint"><code>auto</code> shares the remaining space, <code>content</code> fits its content and <code>break</code> starts a new row.</p>
+            <div class="hl-grid demo-grid">
+                <div class="hl-col-content"><div class="cell">Content</div></div>
+                <div class="hl-col-auto"><div class="cell alt">Auto A</div></div>
+                <div class="hl-col-auto"><div class="cell alt">Auto B</div></div>
+                <div class="hl-break"></div>
+                <div class="hl-col-4"><div class="cell">After break: 4</div></div>
+                <div class="hl-col-auto"><div class="cell">Remaining: auto</div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Offsets</h2>
+            <p class="hint">Offsets are available from 0 to 11 and can also be responsive.</p>
+            <div class="hl-grid demo-grid">
+                <div class="hl-col-4 hl-col-offset-2"><div class="cell">4 + Offset 2</div></div>
+                <div class="hl-break"></div>
+                <div class="hl-col-3 hl-col-offset-0 hl-col-offset-3-m"><div class="cell">3 + Offset 0 / 3-m</div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Order and directions</h2>
+            <p class="hint">Order classes 1–12 plus first/last; direction classes can also use breakpoint suffixes.</p>
+            <h3>Order</h3>
+            <div class="hl-grid demo-grid">
+                <div class="hl-col-3 hl-col-order-last"><div class="cell">DOM 1 / last</div></div>
+                <div class="hl-col-3 hl-col-order-2"><div class="cell">DOM 2 / order 2</div></div>
+                <div class="hl-col-3 hl-col-order-first"><div class="cell">DOM 3 / first</div></div>
+                <div class="hl-col-3 hl-col-order-1"><div class="cell">DOM 4 / order 1</div></div>
+            </div>
+            <h3>row-reverse, changing back to row from m</h3>
+            <div class="hl-grid direction-reverse direction-row-m demo-grid">
+                <div class="hl-col-4"><div class="cell alt">A</div></div>
+                <div class="hl-col-4"><div class="cell alt">B</div></div>
+                <div class="hl-col-4"><div class="cell alt">C</div></div>
+            </div>
+            <h3>column und column-reverse</h3>
+            <div class="hl-grid direction-column demo-grid">
+                <div class="hl-col-content"><div class="cell">Column A</div></div>
+                <div class="hl-col-content"><div class="cell">Column B</div></div>
+            </div>
+            <div class="hl-grid direction-column-reverse demo-grid">
+                <div class="hl-col-content"><div class="cell">Reverse A</div></div>
+                <div class="hl-col-content"><div class="cell">Reverse B</div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Distribution and alignment</h2>
+            <p class="hint">All justify, align-items and align-self variants.</p>
+            <h3>justify: left / right / center / between / around</h3>
+            <div class="hl-grid justify-items-left demo-grid"><div class="hl-col-3"><div class="cell">left</div></div></div>
+            <div class="hl-grid justify-items-right demo-grid"><div class="hl-col-3"><div class="cell">right</div></div></div>
+            <div class="hl-grid justify-items-center demo-grid"><div class="hl-col-3"><div class="cell">center</div></div></div>
+            <div class="hl-grid justify-items-between demo-grid">
+                <div class="hl-col-3"><div class="cell">between</div></div><div class="hl-col-3"><div class="cell">between</div></div>
+            </div>
+            <div class="hl-grid justify-items-around demo-grid">
+                <div class="hl-col-3"><div class="cell">around</div></div><div class="hl-col-3"><div class="cell">around</div></div>
+            </div>
+            <h3>align-items: top / center / bottom</h3>
+            <div class="hl-grid align-items-top axis-demo demo-grid"><div class="hl-col-4"><div class="cell">top</div></div></div>
+            <div class="hl-grid align-items-center axis-demo demo-grid"><div class="hl-col-4"><div class="cell">center</div></div></div>
+            <div class="hl-grid align-items-bottom axis-demo demo-grid"><div class="hl-col-4"><div class="cell">bottom</div></div></div>
+            <h3>align-self: top / center / bottom</h3>
+            <div class="hl-grid axis-demo demo-grid">
+                <div class="hl-col-4 align-self-top"><div class="cell">self top</div></div>
+                <div class="hl-col-4 align-self-center"><div class="cell">self center</div></div>
+                <div class="hl-col-4 align-self-bottom"><div class="cell">self bottom</div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>7. Divider and gutters</h2>
+            <div class="hl-grid align-items-center demo-grid">
+                <div class="hl-col-auto"><div class="cell">Left</div></div>
+                <div class="hl-divider"></div>
+                <div class="hl-col-auto"><div class="cell">Right</div></div>
+            </div>
+            <h3>no-gutter</h3>
+            <div class="hl-grid no-gutter demo-grid">
+                <div class="hl-col-6"><div class="cell alt">No gutter</div></div>
+                <div class="hl-col-6"><div class="cell alt">No gutter</div></div>
+            </div>
+            <h3>no-gutter-s (from 576 px)</h3>
+            <div class="hl-grid no-gutter-s demo-grid">
+                <div class="hl-col-6"><div class="cell alt">Breakpoint gutter</div></div>
+                <div class="hl-col-6"><div class="cell alt">Breakpoint gutter</div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>8. Nested grids</h2>
+            <p class="hint">A grid sits inside a column of the outer grid; the second level contains another third-level grid.</p>
+            <div class="hl-grid demo-grid">
+                <div class="hl-col-12 hl-col-8-m">
+                    <div class="cell tall">
+                        <span class="label">Outer column: 8-m</span>
+                        <div class="hl-grid nested">
+                            <div class="hl-col-12 hl-col-6-s">
+                                <div class="cell">
+                                    <span class="label">Level 2: 6-s</span>
+                                    <div class="hl-grid nested no-gutter">
+                                        <div class="hl-col-4"><div class="cell">3.1</div></div>
+                                        <div class="hl-col-4"><div class="cell">3.2</div></div>
+                                        <div class="hl-col-4"><div class="cell">3.3</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hl-col-12 hl-col-6-s"><div class="cell medium">Level 2: 6-s</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hl-col-12 hl-col-4-m"><div class="cell tall accent">Outer column: 4-m</div></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>9. Fluid wrapper</h2>
+            <p class="hint">The following area uses an <code>hl-wrapper-fluid</code> inside the regular page.</p>
+            <div class="hl-wrapper-fluid">
+                <div class="hl-grid demo-grid">
+                    <div class="hl-col-4"><div class="cell accent">Fluid 4</div></div>
+                    <div class="hl-col-8"><div class="cell accent">Fluid 8</div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
