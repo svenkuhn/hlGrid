@@ -20,6 +20,11 @@
         "url": "https://github.com/svenkuhn/hlGrid/issues"
     },
     "homepage": "https://www.hlgrid.de",
+    "files": [
+        "dist/",
+        "src/",
+        "gruntfile.js"
+    ],
     "scripts": {
         "build": "grunt main",
         "test": "npm run build"
