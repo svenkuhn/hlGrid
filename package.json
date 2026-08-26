@@ -20,6 +20,10 @@
         "url": "https://github.com/svenkuhn/hlGrid/issues"
     },
     "homepage": "https://www.hlgrid.de",
+    "scripts": {
+        "build": "grunt main",
+        "test": "npm run build"
+    },
     "devDependencies": {
         "autoprefixer": "^10.5.4",
         "grunt": "^1.4.1",
